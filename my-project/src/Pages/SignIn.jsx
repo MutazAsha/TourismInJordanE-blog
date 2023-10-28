@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ const SignIn = () => {
 
     try {
       // Replace 'your-api-endpoint' with your actual API endpoint URL
-      const response = await axios.post('your-api-endpoint', formData);
+      const response = await axios.post('http://localhost:8000/user/login', formData);
 
       // Handle the response from your API as needed
       console.log('Log in successful:', response.data);
@@ -86,12 +87,12 @@ const SignIn = () => {
               </div>
               <p className="text-center text-sm text-gray-500">
                 Don't have an account yet?
-                <a
-                  href="/SignUp"
+                <Link
+                  to="/SignUp"
                   className="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none"
                 >
                   Sign up
-                </a>
+                </Link>
                 .
               </p>
             </form>

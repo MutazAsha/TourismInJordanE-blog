@@ -17,7 +17,7 @@ function BlogForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://your-api-url/create-blog', formData);
+      const response = await axios.post('http://localhost:8000/blog/addblogs', formData);
       console.log('Blog created:', response.data);
       // Optionally, you can redirect to the newly created blog or update the blogs list.
     } catch (error) {

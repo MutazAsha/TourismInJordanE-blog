@@ -10,7 +10,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+        const response = await axios.get("http://localhost:8000/");
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching data: ", error);
@@ -43,8 +43,8 @@ const Blogs = () => {
           <button
             key={number}
             onClick={() => paginate(number)}
-            className={`mx-2 p-2 bg-blue-950 text-white hover:bg-blue-800 focus:outline-none ${
-              currentPage === number ? "bg-blue-950" : ""
+            className={`mx-2 p-2 bg-gray-800 text-white hover:bg-gray-700 focus:outline-none ${
+              currentPage === number ? "bg-gray-800" : ""
             }`}
             style={{ width: "40px", height: "40px", borderRadius: "50%" }}
           >

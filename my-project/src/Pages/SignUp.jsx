@@ -14,7 +14,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('your-api-endpoint', formData);
+      const response = await axios.post('http://localhost:8000/user/register', formData);
       console.log('Sign up successful:', response.data);
 
       // Handle successful sign-up, e.g., store user data in state or local storage, or redirect to another page
