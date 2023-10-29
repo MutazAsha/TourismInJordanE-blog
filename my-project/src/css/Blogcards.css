@@ -42,4 +42,7 @@
   a:hover {
     text-decoration: underline;
   }
-  
+  .card-all
+  {
+    margin-bottom: 15rem;
+  }

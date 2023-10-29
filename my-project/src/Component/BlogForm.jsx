@@ -25,10 +25,7 @@ function BlogForm() {
     }
   };
 
-  const handleCreateBlog = () => {
-    // Execute the necessary actions when clicking the "Create Blog" button
-    handleSubmit();
-  };
+  
 
   return (
     <div className="flex items-center justify-center h-screen">
@@ -80,7 +77,7 @@ function BlogForm() {
         </div>
         <button
           type="button" // Change the button type to "button"
-          onClick={handleCreateBlog} // Add the event when clicking the button
+          onClick={  handleSubmit} // Add the event when clicking the button
         >
           Create Blog
         </button>

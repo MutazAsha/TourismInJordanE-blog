@@ -26,10 +26,7 @@ const SignIn = () => {
     }
   };
 
-  const handleLogIn = () => {
-    // Execute the necessary actions when clicking the "Log in" button
-    handleFormSubmit();
-  };
+ 
 
   return (
     <div className="flex items-center justify-center h-screen">
@@ -79,7 +76,7 @@ const SignIn = () => {
               <div className="my-6">
                 <button
                   type="button" // Change the button type to "button"
-                  onClick={handleLogIn} // Add the event when clicking the button
+                  onClick={handleFormSubmit} // Add the event when clicking the button
                   className="w-full rounded-md bg-black px-3 py-4 text-white focus:bg-gray-600 focus:outline-none"
                 >
                   Log in

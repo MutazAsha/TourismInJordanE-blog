@@ -4,7 +4,7 @@ import '../css/Hero.css';
 
 const Hero = () => {
   return (
-    <div class="heros"><>
+    <div class="heros "><>
     <div className="h-screen bg-gray-50 flex items-center">
       <section
         className="bg-cover bg-center py-32 w-full"

@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import BrowserRouter as Router
 import Blogs from './Component/BlogForm';
-// import Blog from './Component/Blog';
+import BlogDetails from './Pages/BlogDetails';
 import Footer from './Component/Footer';
 import Headar from './Component/Headar';
 import Home from './Pages/Home';
@@ -20,6 +20,8 @@ function App() {
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/blogs" element={<Blogs />} /> 
+          <Route path="/BlogDetails/:id" element={<BlogDetails/>} /> 
+          
           {/* <Route path="/Blog" element={<Blog />} />  */}
         </Routes>
         {/* <Blog/> */}

@@ -7,7 +7,7 @@ const SignUp = () => {
     fullname: '',
     email: '',
     password: '',
-    confirm_password: '',
+
   });
 
   const handleFormSubmit = async (e) => {
@@ -24,13 +24,6 @@ const SignUp = () => {
       // Handle sign-up error, e.g., display an error message to the user
     }
   };
-
-  const handleCreateAccount = () => {
-    // Here, you can add anything you want to execute when clicking "Create Account."
-    // In this example, handleFormSubmit is called when the button is clicked.
-    handleFormSubmit();
-  };
-
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
@@ -62,17 +55,9 @@ const SignUp = () => {
               value={formData.password}
               onChange={(e) => setFormData({ ...formData, password: e.target.value })}
             />
-            <input
-              type="password"
-              className="block border border-grey-light w-full p-3 rounded mb-4"
-              name="confirm_password"
-              placeholder="Confirm Password"
-              value={formData.confirm_password}
-              onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
-            />
             <button
               type="button" // Change the button type to "button"
-              onClick={handleCreateAccount} // Add the event when clicking the button
+              onClick={handleFormSubmit} // Add the event when clicking the button
               className="w-full py-3 mt-10 bg-gray-800 rounded-sm
                 font-medium text-white uppercase
                 focus:outline-none hover:bg-gray-700 hover:shadow-none"

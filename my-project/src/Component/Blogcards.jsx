@@ -10,7 +10,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/");
+        const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching data: ", error);
@@ -27,11 +27,12 @@ const Blogs = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 margin-20">
+    
+    <div className="card-all grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 margin-10">
       {currentBlogs.map((blog) => (
         <div key={blog.id} className="bg-white rounded-md p-4 shadow-lg">
           <img src={`https://via.placeholder.com/150`} alt={blog.title} className="w-full h-32 object-cover mb-4 rounded-md" />
-          <h2 className="text-xl font-semibold mb-2">{blog.title}</h2>
+          <h2 className=" text-xl font-semibold mb-2">{blog.title}</h2>
           <p className="text-blue-950 mb-4">{blog.body}</p>
           <Link to={`/blogs/${blog.id}`} className="text-blue-950 hover:underline">
             More Details
